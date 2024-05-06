@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Life</title>
+  </head>
+  <script type="module" defer src="./index.js"></script>
+  <body>
+    <main class="app">
+      <h1 class="app__title">Life</h1>
+      <div class="app__text">
+        Установите размер поля
+        <span class="app__span">
+          <input
+            class="app__input"
+            type="number"
+            name="columns"
+            id="board_columns"
+            min="3"
+            value="10"
+          />
+          x
+          <input
+            class="app__input"
+            type="number"
+            name="rows"
+            id="board_rows"
+            min="3"
+            value="10"
+          />
+        </span>
+      </div>
+      <button class="app__button" id="generateBoardBtn" type="button">
+        Создать игровое поле
+      </button>
+      <div class="app__text">
+        Шанс создания "живых" клеток
+        <span class="app__span"
+          ><input
+            class="app__input"
+            type="number"
+            name="live_cells"
+            min="1"
+            max="100"
+            id="live_cells"
+            value="10"
+          />
+          %</span
+        >
+      </div>
+      <div class="app__text">
+        Выберите способ генерации первого поколения "живых" клеток
+      </div>
+      <div class="app__text">
+        <button class="app__button" id="randomBoardBtn" type="button">
+          Случайным образом
+        </button>
+        <button class="app__button" id="mouseBoardBtn" type="button">
+          С помощью мыши
+        </button>
+      </div>
+      <button class="app__button" id="startGameBtn" type="button">
+        Запуск игры
+      </button>
+      <div class="app__text">
+        Задержка между сменой поколений
+        <span class="app__span"
+          ><input
+            class="app__input"
+            type="number"
+            name="rows"
+            id="timeDelay"
+            value="250"
+          />
+          мс</span
+        >
+      </div>
+
+      <div class="app__text">
+        Время генерации нового поколения
+        <span class="app__span"
+          ><input
+            class="app__input"
+            type="number"
+            name="rows"
+            id="timePlace"
+            value="0"
+            disabled
+          />
+          мс</span
+        >
+      </div>
+      <div class="app__field">
+        <div class="board"></div>
+      </div>
+    </main>
+  </body>
+</html>
